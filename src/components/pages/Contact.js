@@ -1,22 +1,56 @@
-import React from 'react';
+import React, { useState } from "react";
 
-export default function Contact() {
-  return (
+function Contact(props) {
+  const [input, setInput] = useState("");
+
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    props.onSubmit({
+      id: Math.random(Math.floor() * 1000),
+      text: input,
+    });
+
+    setInput("");
+  };
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  // First we check to see if "edit" prop exists. If not, we render the normal form
+  // If the prop "edit" exists, we know to render the update form instead
+  return !props.edit ? (
     <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          name="name"
+          email="email"
+          message="message"
+          onChange={handleChange}
+        ></input>
+
+        <button className="contact-button">Add message</button>
+      </form>
+    </div>
+  ) : (
+    <div>
+      <h3>Update entry: {props.edit.value}</h3>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          name="name"
+          email="email"
+          message="message"
+          onChange={handleChange}
+        ></input>
+
+        <button className="contact-button">Update</button>
+      </form>
     </div>
   );
 }
+
+export default Contact;

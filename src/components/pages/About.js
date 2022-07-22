@@ -1,17 +1,63 @@
-import React from 'react';
+import React from "react";
 
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <section id="about">
+        <div className="row">
+          <div className="three columns">
+            <h2 className="section-title">Jesse Crumley</h2>
+            <img
+              className="profile-pic"
+              src="../../assets/images/selfimage2.png"
+              alt=""
+            />
+          </div>
+
+          <div className="nine columns main-col">
+            <h2>About Me</h2>
+            <p>
+              <p class="mb-0">
+                Apart from studying to become a web developer, I enjoy most of
+                my time being outdoors. I enjoy landscaping, gardening, hiking,
+                fishing, watersports, softball and spending time with family and
+                friends.
+              </p>
+              <p class="mb-0">
+                When forced indoors, I enjoy investing and I spend a large
+                amount of my free time exploring the latest technology
+                advancements such as electric vehicles, blockchain technology,
+                and software development.
+              </p>
+            </p>
+
+            <div className="row">
+              <div className="columns contact-details">
+                <p class="lead mb-5">
+                  I have expierence with HTML, CSS, javascript, NodeJS, OOP,
+                  express, SQL and Web APIs
+                </p>
+                <div class="social-icons">
+                  <a
+                    class="social-icon"
+                    href="https://www.linkedin.com/in/jesse-crumley-3a929ba"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    class="social-icon"
+                    href="https://github.com/crumwj22"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
