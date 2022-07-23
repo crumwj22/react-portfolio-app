@@ -1,21 +1,33 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-export default function Project(props) {
-  const { name, projectImage, liveLink, repoLink } = props;
-
+function Footer() {
   return (
-    <div href={liveLink} target="_blank">
-      <img src={projectImage} alt={name}></img>
-      <div>
-        <div>
-          <a href={liveLink} target="_blank">
-            {name}
+    <footer className="flex-row space-between px-1">
+      <ul>
+        <li className="footer-item">
+          <a
+            className="footer-link"
+            href="https://github.com/crumwj22"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href={repoLink} target="_blank">
-            GitHub Repo
+        </li>
+        <li className="footer-item">
+          <a
+            className="footer-link"
+            href="https://www.linkedin.com/in/jesse-crumley-3a929ba/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </footer>
   );
 }
+export default Footer;
