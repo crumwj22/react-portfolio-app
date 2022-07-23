@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-portfolio-app/static/css/main.e6c13ad2.css",
+    "main.js": "/react-portfolio-app/static/js/main.50eeb50a.js",
+    "static/js/787.a8a33273.chunk.js": "/react-portfolio-app/static/js/787.a8a33273.chunk.js",
+    "static/media/bitcoin_tracker.png": "/react-portfolio-app/static/media/bitcoin_tracker.3b66dcb52a51ef5b8d3f.png",
+    "static/media/weather-dashboard.png": "/react-portfolio-app/static/media/weather-dashboard.7b063aa219468ff4bf7a.png",
+    "static/media/work-day-scheduler.png": "/react-portfolio-app/static/media/work-day-scheduler.f1f971674c2d63b5a8a0.png",
+    "static/media/code-quiz-pic.png": "/react-portfolio-app/static/media/code-quiz-pic.95b52f09a6e889375993.png",
+    "static/media/password_generator.png": "/react-portfolio-app/static/media/password_generator.aba4bcbf332641380c11.png",
+    "static/media/busy-parents.png": "/react-portfolio-app/static/media/busy-parents.1e8e55df92e78673da3f.png",
+    "index.html": "/react-portfolio-app/index.html",
+    "main.e6c13ad2.css.map": "/react-portfolio-app/static/css/main.e6c13ad2.css.map",
+    "main.50eeb50a.js.map": "/react-portfolio-app/static/js/main.50eeb50a.js.map",
+    "787.a8a33273.chunk.js.map": "/react-portfolio-app/static/js/787.a8a33273.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.50eeb50a.js"
+  ]
+}
