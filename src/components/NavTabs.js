@@ -1,9 +1,12 @@
+import { right } from "@popperjs/core";
 import React from "react";
 
 const styles = {
   card: {
     margin: 20,
     background: "#e8eaf6",
+    textAlign: "center",
+    float: "right",
   },
   heading: {
     background: "#9a74db",
