@@ -1,4 +1,12 @@
 import React from "react";
+import headShot from "../../assets/images/selfimage2.png";
+
+const styles = {
+  selfImage: {
+    minHeight: 250,
+    maxHeight: 250,
+  },
+};
 
 export default function About() {
   return (
@@ -6,11 +14,12 @@ export default function About() {
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <h2 className="section-title">Jesse Crumley</h2>
+            <h2 className="d-block d-lg-none">Jesse Crumley</h2>
             <img
-              className="profile-pic"
-              src="../../assets/images/selfimage2.png"
-              alt=""
+              className="rounded-circle mb-2"
+              src={headShot}
+              alt="self image"
+              style={styles.selfImage}
             />
           </div>
 
