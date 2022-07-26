@@ -6,7 +6,9 @@ const styles = {
     margin: 20,
     background: "#e8eaf6",
     textAlign: "center",
-    float: "right",
+    display: "flex",
+    flexWrap: "row",
+    justifyContent: "space-between",
   },
   heading: {
     background: "#9a74db",
@@ -16,6 +18,10 @@ const styles = {
     color: "white",
     padding: "0 20px",
   },
+  navTabs: {
+    justifyContent: "flex-end",
+    float: "right",
+  },
 };
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
@@ -23,7 +29,7 @@ const styles = {
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <nav style={styles.card}>
-      <ul className="nav nav-tabs">
+      <ul className="nav nav-tabs" style={styles.navTabs}>
         <li className="nav-item">
           <a
             href="#about"
